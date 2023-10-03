@@ -56,11 +56,31 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
-
+  
   -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
+
+  -- managing and installing lsp servers
+  use("williamboman/mason.nvim") -- lsp server installer
+  use("williamboman/mason-lspconfig.nvim") 
+
+  -- configuring lsp servers
+  use("neovim/nvim-lspconfig") -- lsp server configurations
+  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+  }) -- enhanced lsp uis
+  use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+
+
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
