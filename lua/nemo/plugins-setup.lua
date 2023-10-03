@@ -96,6 +96,14 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
+  -- diagnostics
+  use({
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }) -- enhanced diagnostics
+  use("folke/lsp-colors.nvim") -- colors for lsp diagnostics
+  use("folke/todo-comments.nvim") -- highlight TODO, FIXME, etc...
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
