@@ -8,6 +8,12 @@ if not mason_lspconfig_status then
   return
 end
 
+local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+if not mason_null_ls_status then
+  return
+end
+
+
 
 mason.setup()
 mason_lspconfig.setup({
@@ -38,9 +44,18 @@ mason_lspconfig.setup({
   },
 })
 
-
-
-
-
-
-
+mason_null_ls.setup({
+  ensure_installed = {
+    "ansiblelint",
+    "dockerfilelint",
+    "hadolint",
+    "markdownlint",
+    "shellcheck",
+    "shfmt",
+    "terraform",
+    "terraform_fmt",
+    "terraform_lint",
+    "terraform_validate",
+    "yamllint",
+  },
+})
