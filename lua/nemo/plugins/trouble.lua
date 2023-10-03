@@ -10,7 +10,7 @@ trouble.setup({
   icons = true,
   mode = "workspace_diagnostics",
   fold_open = "",
-  fold_closed = ""
+  fold_closed = "",
   action_keys = {
     close = "q", -- close the list
     cancel = "<esc>", -- cancel the preview and get back to your last window / buffer / cursor
