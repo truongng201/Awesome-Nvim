@@ -20,8 +20,6 @@ mason_lspconfig.setup({
   ensure_installed = {
     "ansiblels", 
     "bashls",
-    "clangd",
-    "cmake",
     "cssls",
     "cssmodules_ls",
     "dockerls",
@@ -35,10 +33,7 @@ mason_lspconfig.setup({
     "jsonls",
     "tsserver",
     "lua_ls",
-    "pyright",
-    "pylsp",
     "sqls",
-    "terraformls",
     "vimls",
     "yamlls",
   },
@@ -46,16 +41,10 @@ mason_lspconfig.setup({
 
 mason_null_ls.setup({
   ensure_installed = {
-    "ansiblelint",
-    "dockerfilelint",
     "hadolint",
     "markdownlint",
     "shellcheck",
     "shfmt",
-    "terraform",
-    "terraform_fmt",
-    "terraform_lint",
     "terraform_validate",
-    "yamllint",
   },
 })
